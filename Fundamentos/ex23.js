@@ -7,11 +7,11 @@ aluno, suas três notas, a média calculada e uma mensagem "APROVADO" se a médi
 const aluno = (codigo, nota1, nota2, nota3) => {
     let media = 0
     if(nota1>nota2 && nota1>nota3){
-        media = ((nota1*4)/10 + (nota2*3)/10 + (nota3*3)/10)
+        media = (nota1*4 + nota2*3 + nota3*3)/10
     } else if (nota2>nota1 && nota2>nota3){
-        media = ((nota2*4)/10 + (nota1*3)/10 + (nota3*3)/10)
+        media = (nota2*4 + nota1*3 + nota3*3)/10
     } else {
-        media = ((nota2*4)/10 + (nota1*3)/10 + (nota3*3)/10)
+        media = (nota3*4 + nota1*3 + nota2*3)/10
     }
     if(media>=5){
         console.log(`APROVADO, o aluno ${codigo} tirou as notas ${nota1}, ${nota2} e ${nota3}, obtendo a media de ${media} `)
